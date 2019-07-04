@@ -26,6 +26,9 @@ class staticROI(object):
                     self.clone = self.frame.copy()
                     cv2.namedWindow('image')
                     cv2.setMouseCallback('image', self.extract_coordinates)
+
+
+
                     while True:
                         key = cv2.waitKey(2)
                         cv2.imshow('image', self.clone)
@@ -33,7 +36,7 @@ class staticROI(object):
                         # Crop and display cropped image
                         if key == ord('c'):
                             self.crop_ROI()
-                            self.show_cropped_ROI()
+                            #self.show_cropped_ROI()
 
                         # Resume video
                         if key == ord('r'):
@@ -77,18 +80,22 @@ class staticROI(object):
             y2 = self.image_coordinates[1][1]
 
             self.cropped_image = self.cropped_image[y1:y2, x1:x2]
+            img_name = "Images\opencv_frame_{}.png".format(self.img_counter)
+            cv2.imwrite(img_name, self.cropped_image)
+            print("{} written!".format(img_name))
+            self.img_counter += 1
 
             print('Cropped image: {} {}'.format(
                 self.image_coordinates[0], self.image_coordinates[1]))
         else:
             print('Select ROI to crop before cropping')
 
-    def show_cropped_ROI(self):
+'''    def show_cropped_ROI(self):
         cv2.imshow('cropped image', self.cropped_image)
         img_name = "Images\opencv_frame_{}.png".format(self.img_counter)
         cv2.imwrite(img_name, self.cropped_image)
         print("{} written!".format(img_name))
-        self.img_counter += 1
+        self.img_counter += 1'''
 
 
 # python PSI_Camera_test.py

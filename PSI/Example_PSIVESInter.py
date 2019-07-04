@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from PIL import Image
 from mpl_toolkits.mplot3d import Axes3D
 #from PSI4 import PSI4
-from PSI_VES_Inter import PSI_VES_Inter
+from PSI3_VES import PSI_VES
 import cv2
 
 # load the images
@@ -20,5 +20,5 @@ I2 = np.array(cv2.imread('Images\\I2.png',
 I3 = np.array(cv2.imread('Images\\I3.png',
                          cv2.IMREAD_UNCHANGED), dtype='double')
 
-PSI_old = PSI_VES_Inter(I1, I2, I3)
+PSI_old = PSI_VES(I1, I2, I3)
 PSI_old.plot()

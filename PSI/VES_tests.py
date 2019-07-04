@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from PIL import Image
 from mpl_toolkits.mplot3d import Axes3D
 #from PSI4 import PSI4
-from PSI_VES_Inter import PSI_VES_Inter
+from PSI3_VES import PSI_VES
 import cv2
 from Surf import surf
 
@@ -62,6 +62,6 @@ I2_ = cv2.imread('Images\\I2.png', cv2.COLOR_BGR2GRAY)'''
 I1 = cv2.imread('Images\\I1.png', cv2.COLOR_BGR2GRAY)
 I2 = cv2.imread('Images\\I2.png', cv2.COLOR_BGR2GRAY)'''
 
-PSI_old = PSI_VES_Inter(I0.real, I1.real, I2.real)
+PSI_old = PSI_VES(I0.real, I1.real, I2.real)
 PSI_old.plot()
 surf(phi_prue)
