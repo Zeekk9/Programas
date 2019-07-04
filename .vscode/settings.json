@@ -1,0 +1,11 @@
+{
+    "editor.fontLigatures": true,
+    "editor.fontFamily": "Operator Mono",
+    "editor.formatOnType": true,
+    "editor.formatOnSave": true,
+    "editor.wordWrap": "on",
+    "python.linting.pylintEnabled": true,
+    "python.pythonPath": "C:\\ProgramData\\Anaconda3\\python.exe",
+    "python.linting.enabled": true,
+    "git.confirmSync": false
+}

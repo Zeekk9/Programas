@@ -1,0 +1,10 @@
+t=linspace(-10,10,100);
+f=2*pi*10.^6*t.^3;
+f_wrap=atan2(sin(f),cos(f))
+f_unwrap=Desenvuelve_Itoh(f_wrap)
+subplot(311)
+plot(t,f)
+subplot(312)
+plot(t,f_wrap)
+subplot(313)
+plot(t,f_unwrap)
