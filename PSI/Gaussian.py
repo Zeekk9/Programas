@@ -143,6 +143,7 @@ I0 = E_0 * np.conj(E_0)
 I1 = E_1 * np.conj(E_1)
 I2 = E_2 * np.conj(E_2)
 I3 = E_3 * np.conj(E_3)
+
 plt.imshow(I0.real)
 plt.show()
 

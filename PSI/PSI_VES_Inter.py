@@ -65,7 +65,7 @@ class PSI_VES_Inter(object):
         portadora = np.zeros(unwraped.shape)
         for n in range(0, x.size):
             portadora[:, n] = n * p[0] + p[1]'''
-        phase = -unwraped
+        phase = unwraped
         fig = plt.figure()
         ax = fig.add_subplot(121, projection='3d')
         ax.plot_surface(X, Y, phase, cmap='gray')
@@ -73,4 +73,4 @@ class PSI_VES_Inter(object):
         plt.imshow(phase,cmap='gray')
         plt.grid()
         plt.show()
-        
+
