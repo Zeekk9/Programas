@@ -7,8 +7,8 @@ from PSI3_VES import PSI_VES
 import cv2
 from Surf import surf
 
-x = np.linspace(-3, 3, 2000)
-y = np.linspace(-3, 3, 1000)
+x = np.linspace(-3, 3, 200)
+y = np.linspace(-3, 3, 100)
 X, Y = np.meshgrid(x, y)
 
 phi_prue = np.exp(-((X ** 2 + Y ** 2) / 20))
@@ -16,8 +16,8 @@ Amp_prue = 10
 E_prue = Amp_prue * np.exp(1j * phi_prue)
 phi_ref = np.zeros(X.shape) + 1 + np.zeros(Y.shape) + 1
 Amp_ref = 1
-alpha1 = 7 * np.pi / 10
-alpha2 = 4 * np.pi / 3
+alpha1 =   np.pi / 2+0.26
+alpha2 =   np.pi+0.59
 print('originales', alpha1, alpha2)
 print('resta original', alpha2 - alpha1)
 E_ref_1 = Amp_ref * np.exp(1j * phi_ref)
