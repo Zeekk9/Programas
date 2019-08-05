@@ -11,7 +11,7 @@ I3 = np.array(Image.open('Images\Image-6.bmp'), dtype='double')
 I4 = np.array(Image.open('Images\Image-7.bmp'), dtype='double')
 phi = np.arctan2(I1 - I3, I4 - I2)
 unwraped = itoh_2D(phi)
-xlim = unwraped[0, :].size
+xlim = unwraped[00, :].size
 ylim = unwraped[:, 0].size
 x = np.linspace(0, xlim, xlim)
 y = np.linspace(0, ylim, ylim)

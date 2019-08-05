@@ -2,7 +2,7 @@ import numpy as np
 from Simulated_PSI import Simulated_PSI
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
-from PSI_VES_Inter import PSI_VES_Inter
+from PSI_VES import PSI_VES
 
 a = 10
 b = 20
@@ -30,5 +30,5 @@ I0 = A_ * (1 + m_ * np.cos(Z+f0))
 I1 = A_ * (1 + m_ * np.cos(Z+f1))
 I2 = A_ * (1 + m_ * np.cos(Z+f2))
 
-nn = PSI_VES_Inter(I0, I1, I2)
+nn = PSI_VES(I0, I1, I2)
 nn.plot()

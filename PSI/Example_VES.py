@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 from PIL import Image
 from mpl_toolkits.mplot3d import Axes3D
 import cv2
-from itoh2d import itoh_2D
 from PSI_VES import PSI_VES
 
 # load the images
