@@ -12,6 +12,7 @@ class staticROI(object):
         self.capture.set(cv2.CAP_PROP_FOCUS, 10)
         self.capture.set(cv2.CAP_PROP_EXPOSURE, 25)
         self.capture.set(cv2.CAP_PROP_EXPOSURE, 25)
+        self.capture.set(cv2.CV_CAP_PROP_BRIGHTNESS, 25)
         # Bounding box reference points and boolean if we are extracting coordinates
         self.image_coordinates = []
         self.extract = False
