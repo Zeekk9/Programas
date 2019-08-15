@@ -1,2 +1,5 @@
+from PIL import Image
 import numpy as np
-t = np.linspace(-10, 10, 10)
+
+# load the image
+I1 = np.array('Images\image.data', dtype='double')

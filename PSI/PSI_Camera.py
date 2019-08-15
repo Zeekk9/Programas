@@ -6,6 +6,12 @@ class staticROI(object):
         self.capture = cv2.VideoCapture(0)
         self.capture.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
         self.capture.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
+        # I want to change the focus manually myself
+        self.capture.set(cv2.CAP_PROP_AUTOFOCUS, 0)
+        self.capture.set(cv2.CAP_PROP_FOCUS, 10)
+        self.capture.set(cv2.CAP_PROP_FOCUS, 10)
+        self.capture.set(cv2.CAP_PROP_EXPOSURE, 25)
+        self.capture.set(cv2.CAP_PROP_EXPOSURE, 25)
         # Bounding box reference points and boolean if we are extracting coordinates
         self.image_coordinates = []
         self.extract = False

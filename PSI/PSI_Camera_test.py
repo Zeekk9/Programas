@@ -4,8 +4,10 @@ import cv2
 class staticROI(object):
     def __init__(self):
         self.capture = cv2.VideoCapture(0)
-        self.capture.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
-        self.capture.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
+      #  self.capture.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
+       # self.capture.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
+        self.cv2.namedWindow("window", cv2.WND_PROP_FULLSCREEN)
+        self.cv2.setWindowProperty("window",cv2.WND_PROP_FULLSCREEN,cv2.WINDOW_FULLSCREEN)
         # Bounding box reference points and boolean if we are extracting coordinates
         self.image_coordinates = []
         self.extract = False
@@ -26,8 +28,6 @@ class staticROI(object):
                     self.clone = self.frame.copy()
                     cv2.namedWindow('image')
                     cv2.setMouseCallback('image', self.extract_coordinates)
-
-
 
                     while True:
                         key = cv2.waitKey(2)
