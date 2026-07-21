@@ -32,6 +32,9 @@ def cylinder(center_x, center_y, radius, height_z,n):
     return x_grid, y_grid, z_grid
 
 
+
+
+
 x = np.linspace(-xlim, xlim, n)
 y = np.linspace(-ylim, ylim, n)
 X, Y = np.meshgrid(x, y)

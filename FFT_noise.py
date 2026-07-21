@@ -14,19 +14,29 @@ fft = np.fft.fftshift(np.fft.fft(signal))
 def rect(x, h):
     return np.where(abs(x) <= 1, h, 0)
 
+plt.subplot(211)
+plt.plot(t, fft.imag)
+plt.subplot(212)
+plt.plot(t, fft.real)
+plt.show()
 
 h = fft * rect(t, 1)
 ffti = np.fft.ifft(np.fft.fftshift(h))
 
 plt.plot(t, signal)
 plt.show()
-plt.plot(t, rect(t, 90))
-plt.plot(t, fft.imag)
+
+plt.plot(t, rect(t, 1))
+plt.plot(t, fft.real)
 plt.show()
+
 plt.plot(t, h.imag)
 plt.show()
+
 plt.plot(t, ffti.real)
 plt.plot(t, pure)
+plt.show()
+
 plt.subplot(311)
 plt.plot(t, signal)
 plt.subplot(312)
